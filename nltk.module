@@ -1,0 +1,11 @@
+<?php
+
+function nltk_node_update($node) {
+  $cmd =  "import sys,nltk\n";
+  $cmd .= "raw = u'" . $node->body['und'][0]['value'] . "'\n";
+  $cmd .= "tokens = nltk.word_tokenize(raw)\n";
+  $cmd .= "print len(tokens)\n";
+  $cmd = 'echo -e "' . $cmd . '" | python';
+  drupal_set_message(system($cmd));
+  //dpm($node);
+}
