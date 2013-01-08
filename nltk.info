@@ -1,6 +1,3 @@
 name = NLTK
 description = Integrates drupal with the python NLTK 
 core = 7.x
-
-files[] = nltk.module
-
