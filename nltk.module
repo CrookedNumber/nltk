@@ -7,5 +7,4 @@ function nltk_node_update($node) {
   $cmd .= "print len(tokens)\n";
   $cmd = 'echo -e "' . $cmd . '" | python';
   drupal_set_message(system($cmd));
-  //dpm($node);
 }
